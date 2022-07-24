@@ -1,0 +1,8 @@
+public non-sealed class ListFiles extends Command {
+    public ListFiles(VCS vcs) {
+        super(vcs);
+    }
+    public void execute() {
+        for (String s : Util.listFiles(vcs.getRootDir())) System.out.println(s);
+    }
+}
